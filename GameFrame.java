@@ -1,20 +1,17 @@
 import java.awt.Color;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
 import javax.swing.JFrame;
 public class GameFrame extends JFrame{
+    JFrame frame;
     public GameFrame(){
-        this.add(new SnakeGame()); 
-        this.pack();
-        this.setVisible(true);
-        this.setBackground(Color.BLACK);
-        this.setTitle("SNAKE GAME");
-        this.setResizable(false);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
+        frame= new JFrame();
+        frame.add(new SnakeGame(frame)); 
+        frame.pack();
+        frame.setVisible(true);
+        frame.setBackground(Color.BLACK);
+        frame.setTitle("SNAKE GAME");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
     }
 
  
